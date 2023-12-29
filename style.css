@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+
+body {
+  background-color: wheat;
+}
+
+#container {
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  /* border: 1px solid #fff; */
+  width: 100px;
+  height: 500px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card:hover {
+  /* border: 1px solid #fff; */
+  width: 400px;
+}
+
+.card:hover .txt-div h1,
+.card:hover .txt-div p {
+  display: flex;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .txt-div {
+  /* border: 1px solid #000; */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(5px);
+  padding: 0px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card h1 {
+  color: white;
+  display: none;
+  transition: 0.5s;
+}
+
+.card p {
+  /* border: 1px solid #000; */
+  color: rgb(255, 255, 255);
+  text-align: justify;
+  text-align-last: center;
+  display: none;
+  width: 400px;
+  padding: 0px 20px;
+  margin: 50px;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 980px) and (min-width: 320px) {
+  #container {
+    border: 1px solid #000;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card {
+    /* border: 1px solid #fff; */
+    width: 30%;
+    min-height: 50dvh;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card:hover {
+    /* border: 1px solid #fff; */
+    width: 90%;
+  }
+
+  .card p {
+    /* border: 1px solid #000; */
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    text-align-last: center;
+    display: none;
+    width: 320px;
+    padding: 0px 25px;
+    margin: 50px;
+    transition: 0.5s;
+  }
+}
